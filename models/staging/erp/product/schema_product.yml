@@ -1,8 +1,7 @@
 sources:
-  - name: erp_products
-    description: Modulo de Products do sistema Adventure Works
+  - name: erp_product
+    description: Modulo de Product do sistema Adventure Works
     schema: raw_adventure_works
     database: fea24_11
     tables: 
-      - name: product 
-      
+      - name: product
