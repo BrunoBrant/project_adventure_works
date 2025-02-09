@@ -1,0 +1,34 @@
+with
+    endereco as (
+        select * from {{ref("stg_erp_person_address")}}
+    ),
+    estado as (
+        select * from {{ref("stg_erp_person_stateprovince")}}
+    ),
+    pais as (
+        select * from {{ref("stg_erp_person_countryregion")}}
+    ),
+    endereco_incrementado as (
+        select
+        endereco.pk_endereco,
+        endereco.linha1_endereco,
+        endereco.linha2_endereco,
+        endereco.cidade,
+        endereco.codigo_postal,
+        endereco.localizacao,
+        endereco.data_modificacao as data_modificacao_endereco,
+        estado.codigo_estado,
+        estado.ind_unico_estato,
+        estado.nome,
+        estado.data_modificacao as data_modificacao_estado,
+        pais.pk_codigo_pais,
+        pais.nome nome_pais,
+        pais.data_modificacao as data_modificacao_pais
+        from endereco
+        left join estado
+        on endereco.fk_estado = estado.pk_estado
+        left join pais
+        on estado.fk_codigo_pais = pais.pk_codigo_pais
+    )
+
+select * from endereco_incrementado
