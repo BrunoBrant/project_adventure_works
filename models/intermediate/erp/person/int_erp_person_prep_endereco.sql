@@ -17,6 +17,7 @@ with
         endereco.codigo_postal,
         endereco.localizacao,
         endereco.data_modificacao as data_modificacao_endereco,
+        estado.pk_estado,
         estado.codigo_estado,
         estado.ind_unico_estato,
         estado.nome,
