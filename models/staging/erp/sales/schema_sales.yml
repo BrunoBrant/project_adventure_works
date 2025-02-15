@@ -4,9 +4,15 @@ sources:
     schema: raw_adventure_works
     database: fea24_11
     tables:
+      - name: creditcard
+        columns:
+          - name: creditcardid
+            data_tests:
+              - unique
+              - not_null
+              
+      - name: personcreditcard
       - name: salesorderheader
       - name: salesorderdetail
-      - name: creditcard
-      - name: personcreditcard
       - name: salesorderheadersalesreason
       - name: salesreason
