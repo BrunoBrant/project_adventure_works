@@ -21,6 +21,7 @@ with
         estado.codigo_estado,
         estado.ind_unico_estato,
         estado.nome,
+        estado.fk_territorio,
         estado.data_modificacao as data_modificacao_estado,
         pais.pk_codigo_pais,
         pais.nome nome_pais,
