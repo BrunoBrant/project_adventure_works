@@ -11,6 +11,9 @@ with
     dim_endereco as (
         select * from {{ref("dim_endereco")}}
     ),
+    dim_razao_venda as (
+        select * from {{ref("dim_razao_venda")}}
+    ),
     fato_vendas as (
         select 
         dim_solicitacao_venda.pk_ordem_venda,
@@ -19,7 +22,7 @@ with
         dim_solicitacao_venda.preco_unitario, 
         dim_solicitacao_venda.desconto_preco_unitario,
         dim_solicitacao_venda.fk_cartao_credito,
-        dim_solicitacao_venda.pk_razao_venda,
+        dim_razao_venda.pk_fk_razao_venda,
         dim_solicitacao_venda.data_compra,
         dim_pessoa.pk_fk_entidade_negocio,
         dim_solicitacao_venda.status,
@@ -34,6 +37,9 @@ with
         on dim_pessoa.pk_fk_entidade_negocio = dim_cartao_credito.pk_entidade_negocio
         left join dim_endereco
         on dim_solicitacao_venda.fk_endereco_envio = dim_endereco.pk_endereco
+        left join dim_razao_venda
+        on dim_solicitacao_venda.pk_ordem_venda = dim_razao_venda.pk_fk_ordem_venda
+   
     )
 
 select * from fato_vendas    

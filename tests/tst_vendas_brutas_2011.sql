@@ -13,4 +13,4 @@ with vendas_brutas_2011 as (
 
 select soma_total_bruto
 from vendas_brutas_2011
-where soma_total_bruto not between 12.646.111.00 and 12.646.113.00
+where soma_total_bruto not between 12646111.00 and 12646113.00
