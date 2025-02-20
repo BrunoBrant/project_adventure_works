@@ -38,7 +38,7 @@ with
         left join dim_endereco
         on dim_solicitacao_venda.fk_endereco_envio = dim_endereco.pk_endereco
         left join dim_razao_venda
-        on dim_solicitacao_venda.pk_ordem_venda = dim_razao_venda.pk_fk_ordem_venda
+        on dim_solicitacao_venda.pk_ordem_venda = dim_razao_venda.pk_ordem_venda
    
     )
 

@@ -7,7 +7,7 @@ with
     ),
     razao_solicitacao_venda_incrementado as (
         select
-        razao_solicitacao_venda.pk_fk_ordem_venda,
+        razao_solicitacao_venda.pk_fk_ordem_venda as pk_ordem_venda,
         razao_solicitacao_venda.pk_fk_razao_venda,
         razao_venda.nome,
         razao_venda.tipo_razao,
