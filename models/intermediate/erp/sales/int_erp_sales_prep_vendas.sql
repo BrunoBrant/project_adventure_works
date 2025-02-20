@@ -5,12 +5,6 @@ with
     detalhe_solicitacao_venda as (
         select * from {{ref("stg_erp_sales_salesorderdetail")}}
     ),
-    razao_solicitacao_venda as (
-        select * from {{ref("stg_erp_sales_salesorderheadersalesreason")}}
-    ),
-    razao_venda as (
-        select * from {{ref("stg_erp_sales_salesreason")}}
-    ),
     solicitacao_venda_incrementado as (
         select
             ROW_NUMBER() OVER (ORDER BY solicitacao_venda.pk_ordem_venda, detalhe_solicitacao_venda.fk_detalhe_pedido_venda) AS seq_int_vendas, 
@@ -46,17 +40,9 @@ with
             detalhe_solicitacao_venda.preco_unitario,
             detalhe_solicitacao_venda.desconto_preco_unitario,
             detalhe_solicitacao_venda.data_modificacao data_modificacao_detalhe_ordem_venda,
-            razao_venda.pk_razao_venda,
-            razao_venda.nome,
-            razao_venda.tipo_razao,
-            razao_venda.data_modificacao data_modificacao_razao
         from solicitacao_venda
         left join detalhe_solicitacao_venda
         on solicitacao_venda.pk_ordem_venda = detalhe_solicitacao_venda.pk_pedido_venda
-        left join razao_solicitacao_venda
-        on  solicitacao_venda.pk_ordem_venda = razao_solicitacao_venda.pk_fk_ordem_venda
-        left join razao_venda
-        on razao_solicitacao_venda.pk_fk_razao_venda = razao_venda.pk_razao_venda
     )
 
 

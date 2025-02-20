@@ -73,12 +73,3 @@ models:
         description: 'Desconto concedido no preco unitario da venda'
       - name: DATA_MODIFICACAO_DETALHE_VENDA
         description: 'Data de modificacao dos dados da detalhe venda'
-      - name: PK_FK_RAZAO_VENDA
-        description: 'PK da tabela razao venda'
-      - name: NOME
-        description: 'Nome da razao da venda'
-      - name: TIPO_RAZAO
-        description: 'Tipo da razao da venda'
-      - name: DATA_MODIFICACAO_RAZAO  
-        description: 'Data de modificacao dos dados da razao venda'
-      
