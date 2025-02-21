@@ -2,6 +2,11 @@ models:
   - name: prep_razao_vendas
     description: Prep do Modulo de Razao de Vendas do sistema Adventure Works
     columns:
+      - name: SEQ_INT_RAZAO_VENDAS
+        description: 'Sequence da Prep Razao de Vendas'
+        data_tests:
+          - unique
+          - not_null
       - name: PK_ORDEM_VENDA
         description: 'Identificador da ordem venda'
         data_tests: 
