@@ -2,6 +2,11 @@ models:
   - name: prep_endereco
     description: Prep do Modulo de Endereco do sistema Adventure Works
     columns:
+      - name: SEQ_INT_ENDERECO
+        description: 'Sequence da Prep de Endereco'
+        data_tests:
+          - unique
+          - not_null
       - name: PK_ENDERECO
         description: 'Identificador de endereço'
         data_tests:
