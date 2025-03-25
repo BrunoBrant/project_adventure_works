@@ -7,7 +7,7 @@ Identificar as tabelas e colunas que contêm os dados essenciais para responder 
 ### 2.	Consolidação de um Data Warehouse:
 Criar um Data Warehouse estruturado com dimensões e fatos, integrando dados de diversas fontes para facilitar análises e garantir consistência no armazenamento e processamento das informações.
 ### 3.	Garantia da Qualidade dos Dados:
-Realizar testes para validar a confiabilidade das informações, como garantir a receita bruta de R$12.646.112,16 em 2011, conforme solicitado pelo CEO.
+Realizar testes para validar a confiabilidade (unicidade, não nulo, etc) das informações, como garantir a receita bruta de R$12.646.112,16 em 2011, conforme solicitado pelo CEO. 
 ### 4.	Construção de um Dashboard:
 Desenvolver um dashboard interativo para apresentar os resultados consolidados, permitindo que gestores monitorem o desempenho comercial e tomem decisões estratégicas baseadas em dados.
 ### Benefícios Esperados:
