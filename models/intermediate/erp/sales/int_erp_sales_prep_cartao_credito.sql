@@ -7,6 +7,7 @@ with
     ),
     cartao_incrementado as (
         select
+        {{ dbt_utils.generate_surrogate_key(['cartao_credito.pk_cartao_credito']) }} as sk_cartao_credito,
         cartao_credito.pk_cartao_credito,
         cartao_credito.tipo_cartao,
         cartao_credito.numero_cartao,

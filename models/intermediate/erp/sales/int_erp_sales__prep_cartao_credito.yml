@@ -2,6 +2,11 @@ models:
   - name: prep_cartao_credito
     description: Prep do Modulo de Cartao de Credito do sistema Adventure Works
     columns:
+      - name: FK_CARTAO_CREDITO
+        description: 'Surrogate key Prep Cartao de credito'
+        data_tests:
+          - unique
+          - not_null    
       - name: PK_CARTAO_CREDITO
         description: 'Identificador do cartao de credito'
         data_tests:
