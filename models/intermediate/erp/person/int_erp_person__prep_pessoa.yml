@@ -2,6 +2,11 @@ models:
   - name: prep_pessoa
     description: Prep do Modulo de Person do sistema Adventure Works
     columns:
+      - name: SK_ENTIDADE_NEGOCIO
+        description: 'Surrogate key da Prep de pessoa'
+        data_tests:
+          - unique
+          - not_null
       - name: PK_FK_ENTIDADE_NEGOCIO
         description: 'Identificador da Pessoa'
         data_tests:

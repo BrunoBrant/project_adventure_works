@@ -2,6 +2,11 @@ models:
   - name: prep_produto
     description: Prep do Modulo de Produto do sistema Adventure Works
     columns:
+      - name: SK_PRODUTO
+        description: 'Surrogate Key da Prep Produto'
+        data_tests:
+          - unique
+          - not_null   
       - name: PK_PRODUTO
         description: 'Identificador do Produto'
         data_tests:

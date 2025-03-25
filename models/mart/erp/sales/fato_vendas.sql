@@ -29,7 +29,7 @@ with
         dim_pessoa.pk_fk_entidade_negocio,
         dim_solicitacao_venda.status,
         dim_solicitacao_venda.fk_endereco_envio,
-        dim_endereco.seq_int_endereco,
+        dim_endereco.sk_int_endereco,
         dim_endereco.pk_estado,
         dim_endereco.pk_codigo_pais,
         dim_solicitacao_venda.subtotal
@@ -41,7 +41,7 @@ with
         left join dim_endereco
         on dim_solicitacao_venda.fk_endereco_envio = dim_endereco.pk_endereco
         left join dim_razao_venda
-        on dim_solicitacao_venda.pk_ordem_venda = dim_razao_venda.pk_ordem_venda
+        on dim_solicitacao_venda.seq_int_vendas = dim_razao_venda.pk_ordem_venda
    
     )
 
