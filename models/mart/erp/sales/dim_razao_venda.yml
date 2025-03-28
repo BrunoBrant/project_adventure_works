@@ -1,6 +1,6 @@
 models:
-  - name: prep_razao_vendas
-    description: Prep do Modulo de Razao de Vendas do sistema Adventure Works
+  - name: dim_razao_vendas
+    description: Dimensão de Razao de Vendas do sistema Adventure Works
     columns:
       - name: SK_RAZAO_VENDAS
         description: 'Surrogate Key da Prep Razao de Vendas'
@@ -23,4 +23,3 @@ models:
         description: 'Tipo da razao da venda'
       - name: DATA_MODIFICACAO
         description: 'Data modificacao da venda'
-    

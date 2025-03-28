@@ -1,6 +1,6 @@
 models:
-  - name: prep_cartao_credito
-    description: Prep do Modulo de Cartao de Credito do sistema Adventure Works
+  - name: dim_cartao_credito
+    description: Dimensão de Cartao de Credito do sistema Adventure Works
     columns:
       - name: SK_CARTAO_CREDITO
         description: 'Surrogate key Prep Cartao de credito'

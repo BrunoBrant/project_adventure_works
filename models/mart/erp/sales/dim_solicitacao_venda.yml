@@ -1,6 +1,6 @@
 models:
-  - name: prep_vendas
-    description: Prep do Modulo de Vendas do sistema Adventure Works
+  - name: dim_solicitacao_venda
+    description: Dimensão de Solicitacao de Venda do sistema Adventure Works
     columns:
       - name: SK_VENDAS
         description: 'Surrogate Key da Prep Vendas'
