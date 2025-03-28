@@ -16,6 +16,7 @@ with
     ),
     fato_vendas as (
         select 
+        dim_solicitacao_venda.sk_vendas,
         dim_solicitacao_venda.seq_int_vendas,
         dim_solicitacao_venda.pk_ordem_venda,
         dim_solicitacao_venda.quantidade_pedido,
