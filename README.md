@@ -29,3 +29,32 @@ Apresentação de casos de uso e workshops demonstrando como a plataforma pode o
 Planejamento antecipado das atividades e priorização dos requisitos mais urgentes para otimizar o uso dos recursos disponíveis.
 3.	Orçamento e Prazos:
 Divisão do projeto em fases menores, com entregas incrementais e marcos definidos, permitindo ajustes conforme a evolução das necessidades do negócio.
+### Modelo Conceitual do Data Warehouse
+Para a criação do Data Warehouse (DW), foi elaborado um modelo conceitual, conforme ilustrado na imagem anexa, com o objetivo de estruturar e viabilizar a criação dos objetos necessários para a integração, armazenamento e análise de dados.
+A partir desse modelo, foram definidos os componentes principais, como tabelas, dimensões e fatos, que estruturam a arquitetura do DW.
+### Estruturação do Projeto:
+### Camada Staging:
+Organização dos dados: renomeações, padronizações e pequenas transformações.
+### Camada Intermediária (Intermediate):
+Realização das transformações, agregações e relacionamento entre tabelas.
+### Camada Mart:
+Composta por Fatos e Dimensões.
+
+### Planejamento das entregas
+
+
+
+
+
+
+
+
+### Conclusão
+Em resumo, a criação do modelo conceitual do Data Warehouse (DW) estabelece uma base sólida para a integração e análise de dados. 
+
+A estruturação do projeto, dividida em camadas como Staging, Intermediária e Marts, permite um processo eficiente de organização, transformação e armazenamento das informações, garantindo que os dados sejam processados e disponibilizados de forma otimizada. 
+
+A definição clara dos componentes, como tabelas, dimensões e fatos, assegura a qualidade e a precisão das consultas, contribuindo para a tomada de decisões estratégicas e a melhoria dos processos organizacionais. Com esse modelo, é possível garantir uma gestão de dados mais eficiente e uma análise de informações mais ágil e assertiva.
+
+
+
