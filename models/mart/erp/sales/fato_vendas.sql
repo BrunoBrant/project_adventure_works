@@ -17,16 +17,16 @@ with
     fato_vendas as (
         select 
         dim_solicitacao_venda.sk_vendas,
-        dim_solicitacao_venda.seq_int_vendas,
         dim_solicitacao_venda.pk_ordem_venda,
         dim_solicitacao_venda.quantidade_pedido,
         dim_solicitacao_venda.fk_produto,
         dim_solicitacao_venda.preco_unitario, 
         dim_solicitacao_venda.desconto_preco_unitario,
         dim_solicitacao_venda.fk_cartao_credito,
-        dim_razao_venda.seq_int_razao_vendas,
+        dim_razao_venda.sk_razao_vendas,
         dim_razao_venda.pk_fk_razao_venda,
         dim_solicitacao_venda.data_compra,
+        dim_pessoa.sk_entidade_negocio,
         dim_pessoa.pk_fk_entidade_negocio,
         dim_solicitacao_venda.status,
         dim_solicitacao_venda.fk_endereco_envio,
