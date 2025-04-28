@@ -7,8 +7,7 @@ with
     ),
     solicitacao_venda_incrementado as (
         select
-            {{ dbt_utils.generate_surrogate_key(['solicitacao_venda.pk_ordem_venda', 'detalhe_solicitacao_venda.fk_detalhe_pedido_venda']) }} as sk_vendas,
-            ROW_NUMBER() OVER (ORDER BY solicitacao_venda.pk_ordem_venda, detalhe_solicitacao_venda.fk_detalhe_pedido_venda) AS seq_int_vendas, 
+            ROW_NUMBER() OVER (ORDER BY solicitacao_venda.pk_ordem_venda, detalhe_solicitacao_venda.fk_detalhe_pedido_venda) AS sk_vendas, 
             solicitacao_venda.pk_ordem_venda,
             solicitacao_venda.numero_revisao,
             solicitacao_venda.data_compra,
