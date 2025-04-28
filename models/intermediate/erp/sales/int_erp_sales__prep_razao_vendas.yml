@@ -4,11 +4,6 @@ models:
     columns:
       - name: SK_RAZAO_VENDAS
         description: 'Surrogate Key da Prep Razao de Vendas'
-      - name: SEQ_INT_RAZAO_VENDAS
-        description: 'Sequence da Prep Razao de Vendas'
-        data_tests:
-          - unique
-          - not_null
       - name: PK_ORDEM_VENDA
         description: 'Identificador da ordem venda'
         data_tests: 

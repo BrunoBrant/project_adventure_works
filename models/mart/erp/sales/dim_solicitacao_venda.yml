@@ -7,11 +7,6 @@ models:
         data_tests:
           - unique
           - not_null
-      - name: SEQ_INT_VENDAS
-        description: 'Sequence da Prep Vendas'
-        data_tests:
-          - unique
-          - not_null
       - name: PK_ORDEM_VENDA
         description: 'PK da tabela ordem de venda'
         data_tests:
